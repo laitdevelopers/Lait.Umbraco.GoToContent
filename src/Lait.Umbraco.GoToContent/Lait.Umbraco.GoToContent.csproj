@@ -29,7 +29,9 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageReleaseNotes>Initial release. Floating "Edit in Umbraco" pill injected into public pages for authenticated backoffice users; deep-links to the content editor for the current node. Zero configuration.</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
-    <!-- RepositoryUrl / PackageProjectUrl and SourceLink are wired once the GitHub repo is pushed. -->
+    <PackageProjectUrl>https://github.com/laitdevelopers/Lait.Umbraco.GoToContent</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/laitdevelopers/Lait.Umbraco.GoToContent</RepositoryUrl>
+
   </PropertyGroup>
 
   <PropertyGroup>
@@ -53,7 +55,7 @@
   <!-- Files packed into the .nupkg root for nuget.org rendering and the Umbraco Marketplace listing. -->
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-    <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath=\ />
     <None Include="..\..\umbraco-marketplace.json" Pack="true" PackagePath="\" />
   </ItemGroup>
 
