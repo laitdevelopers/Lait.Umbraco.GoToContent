@@ -53,8 +53,8 @@
   <!-- Files packed into the .nupkg root for nuget.org rendering and the Umbraco Marketplace listing. -->
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-    <None Include="icon.png" Pack="true" PackagePath="\" Condition="Exists('icon.png')" />
-    <None Include="umbraco-marketplace.json" Pack="true" PackagePath="\" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\umbraco-marketplace.json" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>

@@ -14,14 +14,7 @@
   ],
   "AuthorDetails": {
     "Name": "Morten Nørrehus",
-    "Url": "https://lait.dk"
-  },
-  "DocumentationUrl": "https://github.com/lait-dk/umbraco-gotocontent#readme",
-  "IssueTrackerUrl": "https://github.com/lait-dk/umbraco-gotocontent/issues",
-  "Screenshots": [
-    {
-      "ImageUrl": "https://raw.githubusercontent.com/lait-dk/umbraco-gotocontent/icon.png",
-      "Caption": "The \"Edit in Umbraco\" pill shown to a logged-in editor on a public page."
-    }
-  ]
+    "Url": "https://lait.dk",
+    "ImageUrl": "https://raw.githubusercontent.com/laitdevelopers/Lait.Umbraco.GoToContent/master/icon.png"
+  }
 }

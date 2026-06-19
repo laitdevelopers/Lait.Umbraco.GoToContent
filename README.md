@@ -6,7 +6,7 @@
 
 No more copy-pasting node IDs or hunting through the content tree. See something to fix on the live site → click → you're editing it.
 
-![The "Edit in Umbraco" pill on a public page](https://raw.githubusercontent.com/lait-dk/umbraco-gotocontent/main/docs/screenshot.png)
+![The "Edit in Umbraco" pill on a public page](https://raw.githubusercontent.com/laitdevelopers/Lait.Umbraco.GoToContent/master/docs/screenshot.png)
 
 ## Install
 
