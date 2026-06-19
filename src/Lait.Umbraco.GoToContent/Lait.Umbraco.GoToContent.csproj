@@ -44,7 +44,7 @@
        net9.0  -> Umbraco 15 (.NET 9), also loads on Umbraco 16.
        net10.0 -> Umbraco 17 (.NET 10), also loads on Umbraco 18+. -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-    <PackageReference Include="Umbraco.Cms.Web.Common" Version="15.0.0" PrivateAssets="all" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="15.1.2" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <PackageReference Include="Umbraco.Cms.Web.Common" Version="17.0.0" PrivateAssets="all" />
