@@ -1,0 +1,27 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "PackageType": "Package",
+  "Title": "Go To Content",
+  "Description": "Adds a floating \"Edit in Umbraco\" pill to the top-right of your public pages, visible only to signed-in backoffice editors. One click jumps straight from the live page to the content editor for the node you're viewing. Zero configuration — just add the package.",
+  "Category": "Editor Tools",
+  "AlternateCategory": "Developer Tools",
+  "Tags": [
+    "editor",
+    "backoffice",
+    "productivity",
+    "deep-link",
+    "content-editing"
+  ],
+  "AuthorDetails": {
+    "Name": "Morten Nørrehus",
+    "Url": "https://lait.dk"
+  },
+  "DocumentationUrl": "https://github.com/lait-dk/umbraco-gotocontent#readme",
+  "IssueTrackerUrl": "https://github.com/lait-dk/umbraco-gotocontent/issues",
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/lait-dk/umbraco-gotocontent/icon.png",
+      "Caption": "The \"Edit in Umbraco\" pill shown to a logged-in editor on a public page."
+    }
+  ]
+}

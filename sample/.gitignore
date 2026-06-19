@@ -1,0 +1,20 @@
+# Umbraco generated content (canonical block per Umbraco source-control docs)
+Sample.Web/appsettings-schema.json
+Sample.Web/appsettings-schema.*.json
+Sample.Web/umbraco-package-schema.json
+Sample.Web/umbraco/Data/CreatedPackages/
+Sample.Web/umbraco/Data/TEMP/
+Sample.Web/umbraco/Data/*.sqlite.db
+Sample.Web/umbraco/Data/*.sqlite.db-shm
+Sample.Web/umbraco/Data/*.sqlite.db-wal
+Sample.Web/umbraco/Logs/
+Sample.Web/wwwroot/media/
+
+# Local-dev settings carrying the unattended-install editor credentials
+Sample.Web/appsettings.Development.json
+Sample.Web/appsettings.Local.json
+Sample.Web/.env
+
+# Defensive build-output exclusion (root .gitignore probably already covers, but be explicit here)
+Sample.Web/bin/
+Sample.Web/obj/

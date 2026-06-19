@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- NU1902/NU1903 are NuGet audit advisories on transitive packages. We pin to the LOWEST
+         supported floor for each target framework by design so the package works across the
+         widest range of Umbraco hosts; consumers' own host pin determines which patches they
+         actually run. Keep the warning visible but don't fail builds on inherited advisories. -->
+    <WarningsNotAsErrors>NU1902;NU1903</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- NuGet / Umbraco Marketplace identity -->
+    <PackageId>Lait.Umbraco.GoToContent</PackageId>
+    <Version>1.0.0</Version>
+    <Title>Go To Content</Title>
+    <Authors>Morten Nørrehus</Authors>
+    <Company>Lait</Company>
+    <Product>Lait.Umbraco.GoToContent</Product>
+    <Description>Adds a floating "Edit in Umbraco" pill on public pages, visible only to logged-in backoffice editors, that jumps straight to the content editor for the current node. Zero configuration after dotnet add package.</Description>
+    <Copyright>Copyright © Lait</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>umbraco;umbraco-marketplace;editor;backoffice;productivity;deep-link</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReleaseNotes>Initial release. Floating "Edit in Umbraco" pill injected into public pages for authenticated backoffice users; deep-links to the content editor for the current node. Zero configuration.</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <!-- RepositoryUrl / PackageProjectUrl and SourceLink are wired once the GitHub repo is pushed. -->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Deterministic build hygiene. ContinuousIntegrationBuild is set automatically in CI
+         (see CI=true), keeping local builds fast and CI builds reproducible. -->
+    <Deterministic>true</Deterministic>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Umbraco floor per target framework: lowest version on each .NET runtime, open upper bound.
+       net9.0  -> Umbraco 15 (.NET 9), also loads on Umbraco 16.
+       net10.0 -> Umbraco 17 (.NET 10), also loads on Umbraco 18+. -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="15.0.0" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="17.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- Files packed into the .nupkg root for nuget.org rendering and the Umbraco Marketplace listing. -->
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" Condition="Exists('icon.png')" />
+    <None Include="umbraco-marketplace.json" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

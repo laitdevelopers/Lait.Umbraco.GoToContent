@@ -1,0 +1,22 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Packed NuGet output
+nupkgs/
+*.nupkg
+*.snupkg
+
+# Visual Studio / Rider / VS Code
+.vs/
+*.user
+*.suo
+.idea/
+
+# Umbraco sample site runtime artifacts
+sample/**/umbraco/Data/
+sample/**/umbraco/Logs/
+sample/**/*.sqlite.db
+sample/**/wwwroot/media/
+sample/**/App_Data/
+**/appsettings.Local.json
